@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.namalliv.software.aprendisaje"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Java en español"
+        tools:replace="label"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Presentacion">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Tutoriales"
+            android:label="@string/title_activity_tutoriales"
+            android:parentActivityName=".Presentacion"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Presentacion" />
+        </activity>
+        <activity
+            android:name=".PrincipalActividad"
+            android:label="@string/title_activity_principal_actividad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PreguntasImportantes"
+            android:label="@string/title_activity_preguntas_importantes"
+            android:parentActivityName=".PrincipalActividad"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.PrincipalActividad" />
+        </activity>
+        <activity
+            android:name=".Programas"
+            android:label="@string/title_activity_programas"
+            android:parentActivityName=".PrincipalActividad"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.PrincipalActividad" />
+        </activity>
+        <activity
+            android:name=".Pruebas"
+            android:label="@string/title_activity_pruebas"
+            android:parentActivityName=".PrincipalActividad"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.PrincipalActividad" />
+        </activity>
+        <activity
+            android:name=".ResultadosTutoriales"
+            android:label="@string/title_activity_resultados_tutoriales"
+            android:parentActivityName=".Tutoriales"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Tutoriales" />
+        </activity>
+        <activity
+            android:name=".ResultadosProgramas"
+            android:label="@string/title_activity_resultados_programas"
+            android:parentActivityName=".Programas"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Programas" />
+        </activity>
+        <activity
+            android:name=".ResultadoPruebas"
+            android:label="@string/title_activity_resultado_pruebas"
+            android:parentActivityName=".Pruebas"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Pruebas" />
+        </activity>
+        <activity
+            android:name=".Ajustes"
+            android:label="@string/title_activity_ajustes"
+            android:parentActivityName=".PrincipalActividad"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.PrincipalActividad" />
+        </activity>
+        <activity
+            android:name=".Comparte"
+            android:label="@string/title_activity_comparte"
+            android:parentActivityName=".PrincipalActividad"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.PrincipalActividad" />
+        </activity>
+        <activity
+            android:name=".MostrarPrograma"
+            android:label="@string/javaespanol"
+            android:parentActivityName=".Programas"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Programas" />
+        </activity>
+        <activity
+            android:name=".MostrarTutoriales"
+            android:label="@string/javaespanol"
+            android:parentActivityName=".Tutoriales"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Tutoriales" />
+        </activity>
+        <activity
+            android:name=".MostrarPruebas"
+            android:label="@string/javaespanol"
+            android:parentActivityName=".Pruebas"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.Pruebas" />
+        </activity>
+        <activity
+            android:name=".MostrarPreguntas"
+            android:label="@string/title_activity_mostrar_preguntas"
+            android:parentActivityName=".PreguntasImportantes"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.namalliv.software.aprendisaje.PreguntasImportantes" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+    </application>
+
+</manifest>
