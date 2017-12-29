@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Aprendisaje</string>
+    <string name="title_activity_tutoriales">Tutoriales</string>
+    <string name="title_activity_principal_actividad">Java</string>
+    <string name="title_activity_preguntas_importantes">Preguntas Importantes</string>
+    <string name="title_activity_programas">Programas</string>
+    <string name="title_activity_pruebas">Pruebas</string>
+    <string name="title_activity_resultados_tutoriales">Resultados Tutoriales</string>
+    <string name="title_activity_resultados_programas">Resultados Programas</string>
+    <string name="title_activity_resultado_pruebas">Resultado Pruebas</string>
+    <string name="principal">Aprende Java</string>
+    <string name="tutoriales">Tutoriales</string>
+    <string name="preguntas">Preguntas</string>
+    <string name="programas">Programas</string>
+    <string name="pruebas">Pruebas</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="compartir">Comparte</string>
+    <string name="action_settings">Action Setting</string>
+    <string name="javaespanol">Java en español</string>
+    <string name="title_activity_ajustes">Ajustes</string>
+    <string name="title_activity_comparte">Comparte</string>
+    <string name="title_activity_mostrar_programa">Mostrar Programa</string>
+    <string name="title_activity_mostrar_tutoriales">Mostrar Tutoriales</string>
+    <string name="title_activity_mostrar_pruebas">Mostrar Pruebas</string>
+    <string name="title_activity_mostrar_preguntas">Preguntas</string>
+    <string name="send_to">Enviar a... </string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

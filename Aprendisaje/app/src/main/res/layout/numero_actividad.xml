@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="1"
+        android:layout_width="58dp"
+        android:textSize="15sp"
+        android:layout_height="59dp"
+        android:id="@+id/numero"
+        android:background="@drawable/circle"
+        android:fontFamily="sans-serif"
+        tools:layout_constraintTop_creator="1"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="19dp"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <TextView
+        android:text="Hola gente"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/actividad"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/numero"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/numero"
+        app:layout_constraintLeft_toRightOf="@+id/numero"
+        android:layout_marginLeft="36dp" />
+</android.support.constraint.ConstraintLayout>

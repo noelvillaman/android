@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_ajustes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.namalliv.software.aprendisaje.Ajustes"
+    tools:showIn="@layout/activity_ajustes">
+
+    <TextView
+        android:id="@+id/losajustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="¿Qué color quieres ver?"
+        android:textSize="25dp"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/buttonAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_azul"
+        android:onClick="cambialo"
+        android:text="Azul"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/losajustes"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/losajustes"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/losajustes"
+        app:layout_constraintHorizontal_bias="0.347" />
+
+    <Button
+        android:id="@+id/buttonVerde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:onClick="cambialo"
+        android:text="Verde"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonAzul"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/buttonAzul"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAzul"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonRojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rojo_shape"
+        android:onClick="cambialo"
+        android:text="Rojo"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonVerde"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/buttonVerde"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVerde" />
+
+    <Button
+        android:id="@+id/cambios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_cambios"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="Original"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:onClick="cambialo"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/buttonRojo"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonRojo"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRojo"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
