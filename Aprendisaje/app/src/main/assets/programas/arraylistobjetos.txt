@@ -1,0 +1,109 @@
+//ArrayListObjetos.java
+package arraylistObjetos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArraylistObjetos {
+
+	public static void main(String[] args) {
+		//Creamos la lista, la inicializamos
+		List<Estudiantes> listaEstudiantes = new ArrayList<>();
+
+		//Ahora añadimos estudiantes a la lista
+		listaEstudiantes.add(new Estudiantes("Pedro", "Villamán", 42, "Tercero"));
+
+		listaEstudiantes.add(new Estudiantes("Juan", "Mena", 5, "Primero"));
+
+		listaEstudiantes.add(new Estudiantes("Anny", "Quezada", 25, "Segundo"));
+
+		listaEstudiantes.add(new Estudiantes("Noel", "Amparo", 12, "Cuarto"));
+
+		listaEstudiantes.add(new Estudiantes("Elías", "Vásquez", 1, "Tercero"));
+
+		listaEstudiantes.add(new Estudiantes("Carlos", "Mendoza", 4, "Primero"));
+
+		listaEstudiantes.add(new Estudiantes("Levi", "Zengel", 15, "Cuarto"));
+
+		listaEstudiantes.add(new Estudiantes("Merari", "De León", 18, "Segundo"));
+
+		listaEstudiantes.add(new Estudiantes("Patricia", "Mera", 6, "Tercero"));
+
+		//Ahora podemos imprimir la cantidad en la lista
+
+		System.out.println("En la escuela tenemos " + listaEstudiantes.size() + " estudiantes");
+
+		//imprimimos al lista así
+		for (Estudiantes estudiante : listaEstudiantes) {
+
+			System.out.println(estudiante.toString());
+
+		}
+	}
+
+}
+//estudiantes.java
+package arraylistObjetos;
+
+public class Estudiantes {
+	private String nombre;
+
+	private String apellido;
+
+	private int número;
+
+	private String grado;
+
+	public Estudiantes(String nombre, String apellido, int número, String grado) {
+		super();
+
+		this.nombre = nombre;
+
+		this.apellido = apellido;
+
+		this.número = número;
+
+		this.grado = grado;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public int getNúmero() {
+		return número;
+	}
+
+	public void setNúmero(int número) {
+		this.número = número;
+	}
+
+	public String getGrado() {
+		return grado;
+	}
+
+	public void setGrado(String grado) {
+		this.grado = grado;
+	}
+
+	@Override
+	public String toString() {
+		return "Estudiantes " + nombre + " " + apellido + ", no. " + número + ", grado " + grado
+			;
+	}
+
+
+
+}

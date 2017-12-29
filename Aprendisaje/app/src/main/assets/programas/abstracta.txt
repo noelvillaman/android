@@ -1,0 +1,199 @@
+//SerieDelCaribe.java
+
+public abstract class SerieDelCaribe {
+	private String pais;
+	private int numeroJugadores;
+
+	public SerieDelCaribe(String pais, int numJugadores){
+
+		this.pais = pais;
+		this.numeroJugadores = numJugadores;
+
+	}
+
+
+
+	public String getPais() {
+		return pais;
+	}
+
+
+
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+
+
+
+	public int getNumeroJugadores() {
+		return numeroJugadores;
+	}
+
+
+
+	public void setNumeroJugadores(int numeroJugadores) {
+		this.numeroJugadores = numeroJugadores;
+	}
+
+
+
+	abstract void calendarioJuegos();
+
+}
+
+//Cuba.java
+
+public class Cuba extends SerieDelCaribe{
+
+	private String[] equipos = {"P. Rico", "Rep. Dom.", "Venezuela", "P. Rico", "Rep. Dom.", "Venezuela"};
+
+
+	public Cuba(String pais, int numJugadores) {
+		super(pais, numJugadores);
+	}
+
+	@Override
+	void calendarioJuegos() {
+		for (int i = 0; i < equipos.length; i++) {
+			System.out.println("3/"+ i +1 + "/2018 vs. " + equipos[i]);
+		}
+
+	}
+
+}
+
+//Venezuela.java
+
+public class Venezuela extends SerieDelCaribe{
+
+	private String[] equipos = {"Rep. Dom.", "P. Rico", "Cuba", "Rep. Dom.", "P. Rico", "Cuba"};
+
+	public Venezuela(String pais, int numJugadores) {
+		super(pais, numJugadores);
+	}
+
+
+
+	@Override
+	void calendarioJuegos() {
+		for (int i = 0; i < equipos.length; i++) {
+
+			System.out.print(i + 1);
+			System.out.print("/3");
+			System.out.println("/2018 vs. " + equipos[i]);
+		}
+	}
+
+}
+
+//RepDom.java
+
+public class RepDom extends SerieDelCaribe {
+
+	private String[] equipos = {"Venezuela", "Cuba", "Puerto Rico",  "Venezuela", "Cuba", "Puerto Rico" };
+
+	public RepDom(String pais, int numJugadores) {
+		super(pais, numJugadores);
+	}
+
+	@Override
+	void calendarioJuegos() {
+		for (int i = 0; i < equipos.length; i++) {
+			System.out.println("3/"+ i +1 + "/2018 vs. " + equipos[i]);
+		}
+	}
+
+}
+
+
+//PuertoRico.java
+
+public class PuertoRico extends SerieDelCaribe {
+
+	private String[] equipos = {"Cuba", "Venezuela", "Rep. Dom.", "Cuba", "Venezuela", "Rep. Dom." };
+
+
+	public PuertoRico(String pais, int numJugadores) {
+		super(pais, numJugadores);
+	}
+
+	@Override
+	void calendarioJuegos() {
+		for (int i = 0; i < equipos.length; i++) {
+			System.out.println("3/"+ i +1 + "/2018 vs. " + equipos[i]);
+		}
+
+	}
+
+}
+
+//UsarClases.java
+
+public class UsarClases {
+
+	public static void main(String[] args) {
+		SerieDelCaribe cuba = new Cuba("Cuba", 25);
+
+		SerieDelCaribe pr = new PuertoRico("Puerto Rico", 25);
+
+		SerieDelCaribe rd = new RepDom("República Dominicana", 25);
+
+		SerieDelCaribe ven = new Venezuela("Venezuela", 25);
+
+		SerieDelCaribe[] calendarios = {rd, pr, cuba, ven};
+
+		for (SerieDelCaribe pais : calendarios) {
+
+			System.out.println();
+
+			System.out.println(pais.getPais() + " ");
+
+			System.out.println();
+
+			pais.calendarioJuegos();
+		}
+
+	}
+
+}
+
+
+//Resultado de impresión
+
+
+
+República Dominicana
+
+1/3/2018 vs. Venezuela
+2/3/2018 vs. Cuba
+3/3/2018 vs. Puerto Rico
+4/3/2018 vs. Venezuela
+5/3/2018 vs. Cuba
+6/3/2018 vs. Puerto Rico
+
+Puerto Rico
+
+1/3/2018 vs. Cuba
+2/3/2018 vs. Venezuela
+3/3/2018 vs. Rep. Dom.
+4/3/2018 vs. Cuba
+5/3/2018 vs. Venezuela
+6/3/2018 vs. Rep. Dom.
+
+Cuba
+
+1/3/2018 vs. P. Rico
+2/3/2018 vs. Rep. Dom.
+3/3/2018 vs. Venezuela
+4/3/2018 vs. P. Rico
+5/3/2018 vs. Rep. Dom.
+6/3/2018 vs. Venezuela
+
+Venezuela
+
+1/3/2018 vs. Rep. Dom.
+2/3/2018 vs. P. Rico
+3/3/2018 vs. Cuba
+4/3/2018 vs. Rep. Dom.
+5/3/2018 vs. P. Rico
+6/3/2018 vs. Cuba

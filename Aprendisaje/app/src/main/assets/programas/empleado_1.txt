@@ -1,0 +1,56 @@
+//Empleado_1.java
+
+public class Empleado_1 {
+    private String nombre;
+    private String domicilio;
+    private int empNumero;
+
+   public Empleado_1(String nombre, String domicilio, int empNumero)
+   {
+      System.out.println("Constructing an Empleado");
+      this.nombre = nombre;
+      this.domicilio = domicilio;
+      this.empNumero = empNumero;
+   }
+   public double calcularPago()
+   {
+     System.out.println("Dentro de Empleado calcularPago");
+     return 0.0;
+   }
+   public void enviarCheque() {
+      System.out.println("Mailing a check to " + this.nombre
+       + " " + this.domicilio);
+   }
+   public String toString()
+   {
+      return nombre + " " + domicilio + " " + empNumero;
+   }
+   public String getNombre()
+   {
+      return nombre;
+   }
+   public String getDomicilio()
+   {
+      return domicilio;
+   }
+   public void setDomicilio(String nuevoDomicilio)
+   {
+      domicilio = nuevoDomicilio;
+   }
+   public int getempNumero()
+   {
+     return empNumero;
+   }
+}
+
+//UsarEmpleado_1.java
+
+public class UsarEmpleado_1 {
+    public static void main(String[] args){
+        Empleado_1 emp1 = new Empleado_1("Pedro Pérez", "Calle Amiga #1234, tlalnepantla, Mx", 34567);
+        System.out.println("El nombre del empleado es: " + emp1.getNombre() + ", su domicilio es " + emp1.getDomicilio());
+
+        //También y más fácil
+        System.out.println(emp1.toString());
+    }
+}

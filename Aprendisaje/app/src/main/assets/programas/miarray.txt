@@ -1,0 +1,14 @@
+public class MyArray {
+
+	public static void main(String[] args) {
+
+	    int[] numeros = {1, 2, 3, 4, 5, 6, 7, 12, 34, 45, 43, 78};
+
+
+		System.out.println("El elemento #1 es: " + numeros[0]);
+		System.out.println("El elemento #5 es: " + numeros[4]);
+		System.out.println("El último elemento es: " + numeros[11]);
+
+	}
+
+}

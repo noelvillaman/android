@@ -1,0 +1,73 @@
+ArrayList tutorial
+
+Una ArrayList es una estructura de dato basada en arreglos, arrays. Una desventaja de usar arreglos, array, es que el número de elemento es establecido, y cuando eso sucede no es fácil añadir más elementos a ésta. Para hacer eso se tiene que aumentar la longitud del arreglo y eso es una acción muy “cara” en Java. La solución para ese problema está en usar ArrayList.
+
+Una ArrayList es una estructurad de dato dinámica. La cantidad de elemento puede aumentar y disminuir según la demanda. Si no sabes la cantidad de elementos en una lista, necesitas usar ArrayList.
+
+Para crear una ArrayList debes usar una de las interfaces que extiende o simplemente usar la clase ArrayList.
+
+El contenido de la formación de una ArrayList es como sigue:
+
+	List<E> identificador = new ArrayList<>();
+	O
+	ArrayList<E> identificador = new ArrayList<>();
+
+List es una interfaz que la clase ArrayList extiende y por eso puede usarla ante de la clase.
+
+Luego se ve algo raro, <E>, esto indica el tipo de objeto que vas usar. Dentro de esos símbolos solo puedes poner objetos. Puede ser una clase que defines o una clase existen en Java. Ejemplo, puedes usar String, Empleado (una clase creada por ti). Pero no puedes usar int, para esto existe una clase, Integer, que puedes usar para trabajar con enteros. Si pones algo que no pertenece, el compilador te lo indicará.
+
+Ejemplo,
+
+	List<String> nombres = new ArrayList<String>();
+
+Recuerda que cada declaración se hace dentro de una clase. La indicación de uso de String en la creación de la ArrayList después de la asignación, el signo de igualdad, no es necesario en el Java moderno.
+
+Después de tener una declaración de la ArrayList, entonces puedes añadir elementos a esta. Para esto tienes que usar un método llamado add().
+
+Ejemplo,
+
+	nombres.add(“Juan”);
+	nombres.add(“Carlos”);
+	nombres.add(“Margarita”);
+	nombres.add(“Josefina”);
+
+Ahora nuestra lista tiene cuatro elementos. Eso se puede mostrar usando el método size() de la lista.
+
+Ejemplo,
+
+	System.out.println(“La cantidad de elementos en la lista es “ + nombres.size());
+
+Eso imprime la cantidad de elementos en la lista. Pero ¿Cómo puedes imprimir lo que está en la lista? Pues, para eso necesita usar algo que se llama iterator, repetidor. Se puede usar un circuito para pasar por la lista completa y usar el elemento por el cual se está pasando.
+
+Ejemplo,
+
+	Iterator repetidor = nombres.iterator();
+
+Este repetidor hereda el método hasNext() que puede usar para atravesar la lista visitando todos sus elementos. También hereda el método next() que es el que se usa para el elemento en proceso. La mejor manera de atravesar y usar cada elemento es usando un circuito while.
+
+Ejemplo,
+
+	while(repetidor.hasNext()){
+		System.out.println((String)repetidor.next());
+	}
+
+Este código comienza desde el primer elemento y mientras sea verdad que la lista tiene elementos, el circuito se ejecuta pasando por cada uno de los elementos. El resultado de esto es que cada elemento de la lista se imprime. Es bueno sabe que puedes hacer lo que imagines con el elemento que están en proceso. “String” dentro del circuito se usa para asegurarse de que lo que se retorna sea una palabra. A eso se le llaman typecast en Java.
+
+Para usar números sólo debes usar la clase necesario como se mencionó arriba. Integer, Double etc.
+
+Ejemplo,
+
+	List<Integer> enteros = new ArrayList<>();
+
+	for(int i = 1; i <= 100; i++){
+                     enteros.add(i);
+              }
+	Iterator repetidor = enteros.iterator();
+	while(repetidor.hasNext()){
+		int cantidad = (Integer)repetidor.next();
+		System.out.println(cantidad);
+	}
+
+Este código imprime los números del uno al cien.
+
+Por favor, trata esto en casa.

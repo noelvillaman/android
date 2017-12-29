@@ -1,0 +1,3 @@
+¿Qué es un atributo?
+
+Un atributo es una variable de instancia.

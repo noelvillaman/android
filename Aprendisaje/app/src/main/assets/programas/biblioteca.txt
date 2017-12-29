@@ -1,0 +1,186 @@
+//Bibioteca.java
+package biblioteca;
+
+
+public class Biblioteca {
+	private String dirección;
+	private Libro[] libros = new Libro[4];
+	private int i = 0;
+
+	public Biblioteca(String address) {
+		this.dirección = address;
+	}
+
+	@Override
+	public String toString() {
+		return dirección;
+	}
+
+	public static void main(String[] args) {
+		Biblioteca primeraBiblioteca = new Biblioteca("10 Main St.");
+		Biblioteca secundaBiblioteca = new Biblioteca("228 Liberty St.");
+
+		primeraBiblioteca.ponLibro(new Libro("El código Da Vinci"));
+		primeraBiblioteca.ponLibro(new Libro("El ingenioso hidalgo Don Quijote de la Mancha"));
+		primeraBiblioteca.ponLibro(new Libro("El diario de Ana Frank"));
+		primeraBiblioteca.ponLibro(new Libro("El señor de los anillos (saga)"));
+
+
+		System.out.println("Horarios de las bibliotecas:");
+		imprimeHorarioLibreria();
+		System.out.println();
+
+		System.out.println("Direcciones de las bibliotecas:");
+		primeraBiblioteca.imprimeDireccion();
+		secundaBiblioteca.imprimeDireccion();
+		System.out.println();
+
+		System.out.println("Sacando El señor de los anillos (saga):");
+		primeraBiblioteca.tomaLibroPrestado("El señor de los anillos (saga)");
+		primeraBiblioteca.tomaLibroPrestado("El señor de los anillos (saga)");
+		secundaBiblioteca.tomaLibroPrestado("El señor de los anillos (saga)");
+		System.out.println();
+
+		System.out.println("Libros disponibles en la primera biblioteca:");
+		primeraBiblioteca.imprimeListaDeLibroDisponibles();
+		System.out.println();
+		System.out.println("Libros disponibles en la segunda biblioteca:");
+		secundaBiblioteca.imprimeListaDeLibroDisponibles();
+		System.out.println();
+
+		System.out.println("Retornado El señor de los anillos (saga):");
+		primeraBiblioteca.regresaLibro("El señor de los anillos (saga)");
+		System.out.println();
+
+		System.out.println("Los libros disponibles en la primer bibbioteca:");
+		primeraBiblioteca.imprimeListaDeLibroDisponibles();
+	}
+
+	private void imprimeDireccion() {
+
+		System.out.println(dirección);
+
+	}
+
+	private void regresaLibro(String string) {
+		try {
+			for (int k = 0; k < libros.length; k++) {
+				if (string.equals(this.libros[k].optenTitulo())) {
+					if (this.libros[k].estaPrestado()) {
+						System.out.println("Usted retornó con exito " + libros[k].optenTitulo());
+						this.libros[k].retornado();
+						;
+					}
+				}
+			}
+
+		} catch (Exception e) {
+			System.out.println("Este libro no existe en nuestro católogo");
+		}
+
+	}
+
+	private void ponLibro(Libro book) {
+		if (i < this.libros.length) {
+			this.libros[i] = book;
+			i++;
+		}
+
+	}
+
+	private void tomaLibroPrestado(String string) {
+		try {
+			for (int k = 0; k < libros.length; k++) {
+				if (string.equals(this.libros[k].optenTitulo())) {
+					if (!this.libros[k].estaPrestado()) {
+						System.out.println("Usted sacó con éxito el libro " + libros[k].optenTitulo());
+						this.libros[k].prestado();
+					} else {
+						System.out.println("Lo sentimos, este libro está prestado.");
+					}
+				}
+			}
+
+		} catch (Exception e) {
+			System.out.println("Este libro no existe en nuestro catálogo.");
+		}
+
+	}
+
+	private void imprimeListaDeLibroDisponibles() {
+		try {
+			for (int i = 0; i < libros.length; i++) {
+				if (!this.libros[i].estaPrestado()) {
+					System.out.println(libros[i].optenTitulo());
+				}
+			}
+		} catch (Exception e) {
+			System.out.println("No hay libro en el catálogo.");
+		}
+
+	}
+
+	private static void imprimeHorarioLibreria() {
+		System.out.println("Las bibliotecas abren diario de 9am a 5pm.");
+	}
+}
+
+
+//Libro.java
+package biblioteca;
+
+
+public class Libro {
+
+	String título;
+	boolean prestado;
+
+	public Libro(String tituloDeLibro) {
+		this.título = tituloDeLibro;
+	}
+
+	public void prestado() {
+		this.prestado = true;
+	}
+
+	public void retornado() {
+		this.prestado = false;
+	}
+
+
+	public boolean estaPrestado() {
+		if (this.prestado == true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void imprimeSiNo(){
+		if(this.prestado == true){
+			System.out.println("Sí");
+		} else {
+			System.out.println("No");
+		}
+	}
+
+	public String optenTitulo() {
+		return título;
+	}
+
+	public static void main(String[] arguments) {
+		Libro ejemplo = new Libro("El código Da Vinci");
+		System.out.println("El título (debe ser El código Da Vinci): " + ejemplo.optenTitulo());
+		System.out.println("¿Está prestado? (debe ser no(false)): " + ejemplo.estaPrestado());
+		ejemplo.rentado();
+		System.out.println("¿Está prestado? (debe ser Sí(true)): " + ejemplo.estaPrestado());
+		ejemplo.retornado();
+		System.out.println("¿Está prestado? (debe ser no(false)): " + ejemplo.estaPrestado());
+	}
+
+	public void rentado() {
+		this.prestado = true;
+	}
+}
+
+

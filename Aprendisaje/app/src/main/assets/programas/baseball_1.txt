@@ -1,0 +1,24 @@
+public class Baseball_1{
+    public static void main(String[] args){
+
+          String primeraBase = "Cabrera";
+          String segundaBase = "Ordon";
+          String shortStop = "Crawford";
+          String terceraBase = "Machado";
+          String catcher = "Molina";
+
+          //Convierte los nombres a mayúsculas
+          primeraBase = primeraBase.toUpperCase();
+          segundaBase = segundaBase.toUpperCase();
+          shortStop = shortStop.toUpperCase();
+          terceraBase = terceraBase.toUpperCase();
+          catcher = catcher.toUpperCase();
+
+          System.out.println(primeraBase);
+          System.out.println(segundaBase);
+          System.out.println(shortStop);
+          System.out.println(terceraBase);
+          System.out.println(catcher);
+
+    }
+}

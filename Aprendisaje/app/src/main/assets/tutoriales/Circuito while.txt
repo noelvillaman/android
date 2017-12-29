@@ -1,0 +1,19 @@
+Un circuito while es aquel que usa una variable para analizar, y no termina hasta que la variable cumpla la condición mostrada entre paréntesis.
+
+Tiene que existir una manera de hacer cambiar la variable para que algún tiempo la condición se cumple. Eso es hace dentro del circuito. Puedes incrementar o disminuir la variable. Todo depende de la condición a buscar.
+
+Ejemplo,
+
+    int variable1 = 100;
+
+    while(variable1 < 1000){
+
+        System.out.println("Esta variable llega hasta mil y ahora es: " + variable1);
+
+        variable1 = variable1 + 50;
+
+    }
+
+En este ejemplo, puedes ver que la viriable incrementa por 50 cada vez que el circuito se ejecuta. Eso hace que la condición se cumpla cuando llegue muy cerca de mil. El número 850 será el último en imprimirse, porque el próximo es el mil, y mil no está incluido.
+
+Por favor, trata eso en casa.

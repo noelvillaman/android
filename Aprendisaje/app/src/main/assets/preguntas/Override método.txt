@@ -1,0 +1,6 @@
+¿Que es override método?
+
+Eso sucede maryormente con una interfaz donde uno solo declara el método y la clase que implementa
+la interfaz le pone el cuerpo que quiera al método. Muchas clases pueden usar este método y todas
+deben tener el mismo identificador para el método y la mismo asignatura, pero lo que produce el cuerpo
+del método puede ser totalmente diferente al de otra clase.

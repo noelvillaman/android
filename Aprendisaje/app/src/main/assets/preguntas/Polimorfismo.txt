@@ -1,0 +1,3 @@
+¿Qué es polimorfismo?
+
+Polimorfismo es hacer lo mismo de muchas maneras. Esto se hace principalmente usando overload método y override método.

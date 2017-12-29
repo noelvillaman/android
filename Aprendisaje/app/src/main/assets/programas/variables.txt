@@ -1,0 +1,26 @@
+//Variables.java
+
+public class Variables {
+	public void operaciones(){
+		int i = 12;
+		int j = 3;
+		
+		System.out.print("La suma de " + i + " y " + j + " es ");
+		
+		System.out.println(i + j);
+		
+		System.out.print("La resta de " + i + " y " + j + " es " );
+		
+		System.out.println(i - j);
+		
+		System.out.print("El producto de " + i + " y " + j + " es ");
+		
+		System.out.println(i * j);
+		
+		System.out.print("La división de " + i + " sobre " + j + " es ");
+		
+		System.out.println(i / j);
+		
+	}
+
+}

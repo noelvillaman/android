@@ -1,0 +1,24 @@
+//Matriz.java
+
+public class Matriz {
+	
+	public static void main(String[] args) {
+
+		int[][] matrix = new int[13][13];
+		
+		for (int i = 1; i <= 12; i++) {
+
+			for (int j = 1; j <= 12; j++) {
+
+				matrix[i][j] = i * j;
+
+				System.out.printf("%4d",matrix[i][j]);
+
+			}
+
+			System.out.println();
+			
+		}
+	}
+
+}

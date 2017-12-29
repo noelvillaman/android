@@ -1,0 +1,47 @@
+El circuito for(For Loop)
+
+El circuito se usa para cuando hace repeciones sin mucho esfuerzo.
+
+La manera de formar un circuito for es la siguiente:
+
+for(inicio; fin; continuacion){
+    aqui se escrib lo que quieres repetir;
+	
+}
+
+El inicio es el punto de entradad del circuito. El fin es una expesion Boolean que el programa mira durante la excución. Si es verdad, el bloque termina y se excuta cualquier
+otro bloque que haya despues de éste.
+
+Por exemplo,
+
+for(int i = 1; i < 13; i++){
+    System.out.println(i);
+}
+
+Este circuito produce los números del uno al 12. Cada uno en una línea. Si quieres que se impriman en una solo línea, debes usar System.out.print() en vez de
+System.out.println(), pero debes añardir una espacio en blanco entre ellos.
+
+Por ejemplo,
+
+for(int i = 1; i < 13; i++){
+    System.out.print(i + " ");
+}
+
+En este caso, la parte entre comillas es un espacio en blanco que se imprimirá después del número.
+
+Circuito for es bueno para popularizar areglos.
+
+Por ejemplo,
+
+	String[] nombres;
+	for(int i = 0; i < 5; i++){
+		nombres[i] = "Me llamo " + i;
+	}
+El bloque anterior producirá:
+	Me llamo 0
+	Me llamo 1
+	Me llamo 2
+	Me llamo 3
+	Me llamo 4
+
+Por favor, trata esto en casa. 

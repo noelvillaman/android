@@ -1,0 +1,11 @@
+public class Duarte {
+
+	public static void main(String[] args) {
+
+		System.out.println("Una frase de Juan Pablo Duarte: ");
+
+		System.out.println("Trabajemos por y para la patria, que es trabajar para nuestros hijos y para nosotros mismos.");
+
+	}
+
+}

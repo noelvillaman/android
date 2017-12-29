@@ -1,0 +1,3 @@
+¿Qué es una interfaz?
+
+La interfaz es una colección de métodos abstractos que promete el comportamiento de la clase que la implementa.

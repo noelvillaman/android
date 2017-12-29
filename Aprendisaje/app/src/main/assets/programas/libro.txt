@@ -1,0 +1,33 @@
+Libro.java
+
+public class Libro{
+    private String título;
+    private String autor;
+    private double precio;
+
+    //Construtor
+
+    public Libro(String título, String autor, double precio){
+
+        this.título = titulo;
+
+        this.autor = autor;
+
+        this.precio = precio;
+
+    }
+
+}
+
+CreadorLibro.java
+
+public class CreadorLibro{
+
+    public static void main(String[] args)
+
+        Libro libro1 = new Libro("La boda de ella", "Juaquín Balaguer", 123.50);
+
+        Libro libro2 = new Libro("Mi escuelita", "Niño Ranfis", 140.00);
+    }
+
+}

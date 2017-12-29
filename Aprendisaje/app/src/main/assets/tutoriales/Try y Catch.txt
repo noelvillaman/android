@@ -1,0 +1,105 @@
+Una excepción es un probla que surge durante la ejecución de un programa. Esta puede ocurrir por muchas razones diferenctes, incluyendo las siguientes:
+
+    •    El usario entró datos inválidos.
+    •    Un archivo que necesita abrirse no existe.
+    •    Una conección a la red falló y se perdió en medio de la comunicación, o la JVM se quedó sin memoria.
+
+Las excepciones se producen por causa del usuario, el programador o recursos físicos que dejan de funcionar en medio de ejecuciones.
+
+Existe una jerarquía entre las clases de excepciones. Por encima de todas las clases está la clase Throwable, luego están las clases Error y Exception que extienden la clase Throwable.
+
+La clase Exception tiene muchas subclases, entre ellas están RuntimeException, IOException, SQLException, etc.
+
+La clase RuntimeException tiene otras subclases, entre ellas están ArithmericException, NullPointerException, etc.
+
+Las subclases de java.lang.Exception se dividen en does categorías:
+    •    Excepciones marcadas
+    •    Exceptiones no marcadas
+
+Las excepciones marcadas son aquellas que extienden las clases Throwable sin RuntimeException y Error. El compilador las marca en tiempo de compilación.
+
+El compilar marca cada método invocado y declarado y determina si el método levanta alguna excepción.
+
+Ejemplo,
+              •  ClassNotFoundException
+              •  IOException
+              •  FileNotFoundException
+
+Las excepciones no marcadas son las que extienden RuntimeException clase.
+
+Las excepciones no marcadas son excepciones de objeto que no tienen que ser atrapados explícitamente. Cuando una excepción de esta ocurre, la JVM lo maneja automáticamente.
+
+El compilador no marca código para ver si una excepción se producirá, en vez de eso, estas excepciones se marcan en tiempo de ejecución, runtime.
+
+Ejemplo,
+
+      •     NullPointerException
+      •     IndexOutOfBoundException
+      •     ArrayIndexOutOfBoundsException
+
+Para manejar excepciones en Java se hace usando condiciones try, catch, throw, throws, y finally.
+
+Ejemplo,
+
+            Try {
+                     //código que pude levantar una excepción
+                } catch (<tipo de exception> e){
+                     //código que maneja la excepción
+                } catch (<tipo de exception> e){//e es más algo en jerarquía
+                    //código que maneja la excepción
+                } finally {
+                    //livera los recursos
+            }
+            //más código aquí
+
+A lo sumo un bloque catch se ejecuta.
+El bloque finally se ejecuta de cualquier manera, aun cuando existe o no error alguno.
+
+Ejemplo,
+
+        Class DemoExcepcion{
+             Public static void main(String[] args){
+                 Try {
+                       Int denominar = 0;
+                       Int resultado = 10/denominador;
+                 } catch (ArithmeticException ae) {
+                            System.out.println(ae);
+                 }
+                 System.out.println(“El resto de codigo va aqui……”);
+             }
+        }
+
+Las causas por las que usamos manejo de excepciones son:
+
+    •  Mejora la legibilidad y mantenimiento de una aplicación.
+    •  Es fácil de ver donde ocurre la excepción.
+    •  Las excepciones propagan la invocación de la stack en tiempo de ejecución, runtime.
+
+Es posible tener más de un bloque catch porque el código puede que levante diferente tipos de excepciones.
+
+Existe una jerarquía para las excepciones, ya que la primera que ocurra es la que se va a ejecutar y las demás se obvian, pon las clases derivadas de otras primero y las clases bases después de estas o de lo contrario se producirá un error de compilación.
+
+El bloque finally encierra código que se ejecuta siempre después del bloque try, ya sea que se produzca una excepción o no.
+
+Aun si existe un returno en el bloque try, el bloque finally se ejecuta inmediatamente después del retorno y antes que el retorno se ejecute.
+
+Finally no se ejecuta si la aplicación termina antes de los esperado del bloque try vía el método System.exit.
+
+
+Ejemplo,
+
+        class Show{
+                public static void main(String[] args){
+                    try{
+                        int d = 0;
+                        int a = 100/d;
+                     } catch(AritmeticException ae){
+                         System.out.prinln(ae);
+                     } finallay {
+                         System.out.println("Esto se ejecuta siempre");
+                     }
+                }
+        }
+
+Un bloque catch debe estar asociado a un bloque try. El bloque catch correspondiente se ejecuta si se produce una excepción de un tipo particular dentro del bloque try. Por ejemplo, si se produce una excepción aritmética en el bloque try, entonces las declaraciones encerradas en el bloque catch de excepción aritmética se ejecutan.
+

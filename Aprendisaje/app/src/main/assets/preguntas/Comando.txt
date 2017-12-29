@@ -1,0 +1,5 @@
+¿Puede Java funcionar en la pantalla comanddo?
+
+Java no solo funciona en los IDE, sino también en la consola de comandos, la pantalla negra. Si tienes Java installado en tu maquina puedes usar la consola de comandos para correr programas.
+
+Despué de crear tu archivo con la extensión java, Hola.java, puedes compilar ese archivo en la consola de comandos usando el comando javac + el nombre del archivo

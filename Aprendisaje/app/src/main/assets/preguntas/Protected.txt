@@ -1,0 +1,8 @@
+¿Qué es modificador de acceso protegido (protected)?
+
+Modificador de acceso Protegido - protected
+
+Variables, métodos y constructores, que se declaran protegidas en una superclase puede accederse solamente por las subclases en otro paquete o cualquier clase dentro del paquete de clase los miembros protegidos
+
+El modificador de acceso protegida no puede aplicarse a clases e interfaces. Métodos, campos pueden declarar protegidos, sin embargo, métodos y campos en una interfaz no se pueden declarar protegidos.
+

@@ -1,0 +1,4 @@
+
+¿Qué son palabras reservadas de Java?
+
+Palabras reservadas de Java son aquellas que Java usa para sus declaciones internas. Estas palabras no pueden ser usadas para crear idenficadores, nombres.

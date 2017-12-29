@@ -1,0 +1,7 @@
+¿Qué es modificador de acceso público (public)?
+
+Modificador de acceso público - public
+
+Una clase, método, constructor, interfaz, etc. declarado público se puede acceder desde cualquier otra clase. Por lo tanto, los campos, métodos, bloques de declaran dentro de una clase pública se pueden acceder desde cualquier clase pertenecientes al universo de Java.
+
+Sin embargo, si la clase pública que estamos tratando de acceder está en un paquete diferente, entonces la clase pública todavía necesita importar. Debido a la herencia de clases, todos los métodos públicos y variables de una clase son heredadas por sus subclases.

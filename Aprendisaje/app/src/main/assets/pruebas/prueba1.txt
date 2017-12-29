@@ -1,0 +1,12 @@
+¿Qué se imprime con este bloque de código?
+
+public void imprimeAlgo()
+{
+      int r = 0;
+      System.out.println("r");
+}
+
+1. 0
+2. Error de compilación.
+3. r
+4. Nada, el método no tiene argumento.

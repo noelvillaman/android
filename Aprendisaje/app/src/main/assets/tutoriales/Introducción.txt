@@ -1,0 +1,30 @@
+Java
+
+Java es un lenguaje de programación de propósito general que es concurrente, basado en clases y orientado a objetos.
+
+Java es fácil
+
+Java es fácil porque no tienes que usar headers como se hace en C. No necesitas pointers, estructuras, unions u operaciones oveloading.
+Java es orientado a objetos (Object-Oriented)
+
+Todo en Java es un objeto. Es una técnica de programación que se enfoca en el dato y la interfaz a ese objeto.
+
+Java se conecta a redes
+
+No estamos hablando de redes sociales en este caso, sino a lo que se conoce como redes para los programadores. La capacidad de Java conectarse a las redes es fuerte y fácil de usar.
+
+Java es robusto
+
+Java pone mucho énfasis en ver problemas que pueden ser detectado por el compilador sin correr el programa. Esto es muy bueno y útil. El compilador descubre problemas que otros lenguajes de programación solo lo descubrirían si corres el programa. Como se llama en inglés, runtime.
+
+Java es seguro
+
+Java tiene mucha seguridad que ha sido añadida a través de los años. Java usa la noción de clases firmadas que permite ver quien escribió la clase que quieres usar en tu programa.
+
+Java es neutro en arquitecturas
+
+El compilador genera un archivo que puede ser usado sobre muchos procesadores. Esto lo hace por medio de generar instrucciones de código de byte (bytecode) que no tienen nada que ver con la arquitectura de una computadora en especial.
+
+
+
+

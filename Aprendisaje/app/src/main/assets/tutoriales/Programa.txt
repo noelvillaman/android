@@ -1,0 +1,35 @@
+Cómo escribir un programa
+
+Para escribir un programa lo primero que debes hacer es tener en claro lo qué quieres. En Java puedes usar comandos o IDE. IDE es lo más recomendable ya que 
+ayuda mucho al programador. Entre los IDEs más conocidos estan Eclipse y NetBean. En este tutorial nos enfocamos en Eclipse. La instalación de Eclipse no es algo 
+que se verá en este tutorial. Aquí asumimos que tienes Eclipse preparado.
+
+Abre Eclipse y ve a la etiqueta File or Archivo y eliges New/Java Project. Escribe el nombre del projecto y pulsa Terminar/Finish. Cuando tengas el projecto creado,
+puedes hacer un click derecho sobre el nombre del projecto y crear New/Class. Escribe el nombre de la clase y ese será el archivo del programa. Eclipse creará un 
+archivo con la extención java en él. Es bueno elegir la option de tener main. Si eliges esta casilla, Eclipse creará el método main para tu aplicación.
+
+Ya con todo esto tienes un programa con la mayoría de componentes. Lo único que faltaría es algunas líneas de código que presenten algo en la pantalla.
+
+Por ejemplo,
+
+System.out.println("El respeto a derecho ajeno es la paz.");
+
+Esta línea produce lo que esta dentro del las comillas. Las comillas son necesarias para que la expresión se imprima. Si no tiene comillas, Eclipse
+te mostrará un error que indica que no hay variables con dichas identificaciones. 
+
+En Java cada bloque termina con punto y coma. Si no usas punto y coma, Eclipse lo marcará e indicará que el bloque no ha terminado adecuadamente.
+
+public class MyClase{
+      public static void main(String[] args){
+	     System.out.println("El respeto al derecho ajeno es la paz");
+	  }
+} 
+
+El bloque de arriba es un programa completo. Las partes de este programa son: public, que es una palabra reservada por Java, indica que la clase
+puede ser accesible desde cualquier parte en este paquete. Class es otra palabra reservada por Java para declarar una clase. MyClase es el identificador
+o nombre de la clase. Este tiene que ser el nombre del archivo también.
+
+Dentro de la clase se encuentra public. Static indica que el método pertenece la clase. Void indica que el método no returna nada. Main es el identificador o 
+nombre del método. El arrgle de palabras, String[], se usa para cualquier argumento que se le pase al programa como el comando. 
+
+System.out.println es para producir algo en la pantalla con una línea nueva al final.

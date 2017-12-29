@@ -1,0 +1,3 @@
+¿Qué es una excepción?
+
+Una excepción es un problema que sucede durante la excución de un programa. Puede ser causada por el usuario, el programador y por recursos físicos que fallan de alguna manera.

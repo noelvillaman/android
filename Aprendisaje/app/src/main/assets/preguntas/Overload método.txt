@@ -1,0 +1,9 @@
+¿Qué es overload método?
+
+Es un método que tiene el mismo identicador pero diferentes parámetros. Se dice que tiene una asignatura
+diferente.
+
+La lista de argumentos podrían diferir en –
+1. Número de parámetros.
+2. Tipo de datos de parámetros.
+3. Tipo de secuencia de datos de parámetros.

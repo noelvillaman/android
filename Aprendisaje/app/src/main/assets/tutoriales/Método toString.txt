@@ -1,0 +1,59 @@
+¿Qué pasa si inicializas una clase e imprimes ese identifidor?
+
+Ejemplo,
+
+        Empleado empleado1 = new Empleado("Juan", "Germano", 1234, 1200.00);
+
+        System.out.println(empleado1);
+
+Lo que este codigo imprime no es otra cosa que la dirección del objecto. Uno esperaría que lo que se imprime es Juan Germano 1234 1200.00, pero eso no es lo que sucede. Se imprimer algo como eso app2.Empleado_2@15db9742.
+
+app2.Empleado@15db9742 contiene el nombre del paquete, el identificador de la clase y dónde se encuentra en memoria. Eso no es lo que uno quiere.
+
+Para poder imprimir el cotenido de la clase, necesitas usar métodos. Mayormente usas lo que se llama getter and setter para esto.
+
+Ejemplo,
+
+        System.out.println(empleado1.getNombre());
+        System.out.println(empleado1.getApellido());
+
+Si tienes esos métodos definidos, puedes usarlos para imprimir o usar cada uno de los argumentos del constructor de la clase.
+
+Ahora, si quieres uno solo método que haga todo eso, debes usar el método que la clase hereda llamado toString(). Debes usar método override con éste.
+
+El método toString() funciona para darle presentación en palabras al objeto en uso. Este método se declara dentro de la clase y puedes imprimir lo que quieras desde ahí.
+
+
+
+Ejemplo,
+
+        public class Empleado{
+            //variables
+            private String nombre;
+            private String apellido;
+            private int identidad;
+            private double salario;
+
+            //constructor
+            ...
+
+            //getter and setter
+            ...
+
+            @Override
+            public String toString() {
+            		return "Empleado nombre=" + nombre + ", apellido=" + apellido + ", identidad=" + identidad + ", salario="
+            				+ salario;
+            }
+
+        }
+
+Después de crear este método, sí puedes usarlo para imprimir una representación del objeto.
+
+Ejemplo,
+
+        System.out.println(empleado.toString());
+
+Este método tiene una firma, signature, tal como otro del objeto, pero también tiene una supercripción, @Override, que indica que este método  está destinada a reemplazar una declaración de método en una superclase.
+
+Por favor, trata eso en casa.

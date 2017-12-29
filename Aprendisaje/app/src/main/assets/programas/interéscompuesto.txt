@@ -1,0 +1,47 @@
+//InteresCompuesto.java
+
+public class InteresCompuesto {
+
+	public static void main(String[] args) {
+		final double TARIFAINICIAL = 10;
+		final int TARIFANO = 6;
+		final int AÑOSNO = 15;
+
+		double[] tasaInterés = new double[AÑOSNO];
+
+		for (int j = 0; j < tasaInterés.length; j++) {
+			tasaInterés[j] = (TARIFAINICIAL + j) / 100.0;
+		}
+
+		double[][] balances = new double[AÑOSNO][TARIFANO];
+
+		for (int j = 0; j < balances[0].length; j++) {
+			balances[0][j] = 10000;
+		}
+
+		for (int i = 1; i < balances.length; i++) {
+			for (int j = 0; j < balances[i].length; j++) {
+				double balanceAnterior = balances[i - 1][j];
+
+				double interés = balanceAnterior * tasaInterés[j];
+
+				balances[i][j] = balanceAnterior + interés;
+
+			}
+		}
+
+		for (int j = 0; j < tasaInterés.length; j++) {
+			System.out.printf("%9.0f%%", 100 * tasaInterés[j]);
+		}
+
+		System.out.println();
+
+		for (double[] fila : balances) {
+			for (double d : fila)
+				System.out.printf("%10.2f", d);
+			System.out.println();
+
+		}
+	}
+
+}

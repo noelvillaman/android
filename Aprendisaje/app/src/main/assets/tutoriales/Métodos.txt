@@ -1,0 +1,43 @@
+Métodos son parte de una clase que indican cómo se debe compartar la clase. Una clase puede tener tantos métodos como sean necesarios.
+
+Los métodos de una clase silver para hacer que un programa sea mas eficaz a la hora invocarlo. Un buen programador usa métodos cuando algo se repite muchas veces en un programa.
+
+A la hora de nombrar los métodos el programador tiene todo control sobre ellos, pero lo más aconsejable es usar nombres que describan lo que el método hace. Si en el cuerpo del método se calcula un por ciento, es bueno llamarlo con algo que se acerque a lo que hace.
+
+La manera de nombra métodos compuesto de dos o más palabras es escribiendo la primera palabra en minuscula y el inicio de las otras en mayúsculas.
+
+Ejemplo,
+
+        //el método se  usa para leer un libro
+        public void leeLibro(){
+            ...
+        }
+
+El contenido los métodos es el siguiente:
+
+    1. Los métodos tienen un tipo de acceso, tal como, private, public, etc.
+
+    2. Los métodos tienen una tipo de retorno, tal como , int, void, String, objeto.
+       Cuando el método no retorna nada, se usa void como tipo de retorno.
+
+    3. Los métodos tienen un identificador, nombre, tal como, getNombre.
+
+    4. Los métodos pueden o no tener argumentos entre los paréntesis, tal como, (String nombre, ...)
+
+    5. Los métodos tienen paréntesis curvos, { }, para indicar el comienzo y final del mismo. Dentro de estos se declara el cuerpo de los métodos.
+
+Este order es el que debes usar para crear los métodos de una clase. Los cuatro primeros se llaman la asignatura (de los métodos).
+
+Ejemplo,
+
+        public void imprimeEso(String cosa){
+            int doctor = 3;
+
+            for(int i = 0; i < doctor; i++){
+                System.out.println(cosa + i);
+            }
+        }
+
+La asignatura de este método es como sigue. Es público, lo que indica que puede ser accedido desde cualquier parte en el parquete. No retorna nada. Y el identificador es imprimerEso. Contiene un argumento de tipo palabra.
+
+Por favor, trata esto en casa.

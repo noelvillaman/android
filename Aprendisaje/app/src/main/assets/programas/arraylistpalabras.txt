@@ -1,0 +1,35 @@
+//ArrayListPalabra.java
+package arraylistPalabras;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayListPalabras {
+
+	public static void main(String[] args) {
+		ArrayList<String> palabras = new ArrayList<>();
+		String[] cosas = {"silla", "mesa", "casa", "carro", "comedor",
+				"cepillo", "cama", "reloj", "pote", "sepo", "botella",
+				"papel", "lapiz", "zapato", "radio", "ipad", "computadora",
+				"dibujo"};
+
+		//Añadir los elementos del arreglo cosas dentro de la lista de palabras
+
+		for(String cosa : cosas){
+			palabras.add(cosa);
+		}
+
+		//Ver la cantidad en la lista
+		System.out.println("La cantidad en la lista es: " + palabras.size());
+
+		//Obtenemos el repetidor
+		Iterator<String> lista = palabras.iterator();
+
+		//Imprimir todos los elementos
+		while(lista.hasNext()){
+			System.out.print(lista.next() + ", ");
+		}
+
+	}
+
+}

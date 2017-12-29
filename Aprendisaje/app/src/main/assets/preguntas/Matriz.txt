@@ -1,0 +1,1 @@
+Una matriz en Java es un arreglo, array, cuyo elementos son también arreglo o arreglos. Es arreglos dentro de un arreglo.

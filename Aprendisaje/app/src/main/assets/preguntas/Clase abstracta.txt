@@ -1,0 +1,3 @@
+¿Qué son clases abstractas?
+
+Las clases abstractas son clases que contienen uno o más métodos abstractos. Un método abstracto es un método que se ha declarado, pero no contiene ninguna implementación. Las clases abstractas no pueden instanciarse y requieren subclases para proporcionar implementaciones para los métodos abstractos. Veamos un ejemplo de una clase abstracta y un método abstracto.

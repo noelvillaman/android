@@ -1,0 +1,26 @@
+public class Baseball_2{
+    public static void main(String[] args){
+
+          String[] jugadores = {
+                          "Cabrera",
+                          "Ordon",
+                          "Crawford",
+                          "Machado",
+                         "Molina"
+
+         };
+
+         for(int i = 0; i < jugadores.length; i++){
+
+                jugadores[i] = convertirMayusculas(jugadores[i]);
+                System.out.println(jugadores[i]);
+         }
+
+    }
+
+    //método para convertir palabras a mayúscula
+    private static String convertirMayusculas(String palabra)
+    {
+            return palabra.toUpperCase();
+    }
+}

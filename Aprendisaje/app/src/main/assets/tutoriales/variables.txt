@@ -1,0 +1,64 @@
+Una variable es la unidad básica de armacenamiento en un programa Java. Una
+variable es un lugar en la memoria de tu computadora(Random Access Memory(RAM))) en
+la cual se puede almacenar un valor y desde cual se puede obtener ese valor luego.
+
+La variable debe definirse en una clase siempre y se le debe informar a Java qué tipo de
+variable es. 
+
+Ejemplo,
+
+	int número;
+
+Existen tres tipos de variables
+
+1. Variable de clase o estática
+
+	Una variable de instancia es un campo declarado con la palabra reservada por Java static dentro 
+	de una clase. Este tambien puede ser creada en una interfaz con o sin la palabra reservada static.
+	
+	Este tipo de variable se declarar al nival más algo de la clase y comienzan su existencia cuando la clase
+	se carga a la memoria y termina cuando la clase se descarga de la memoria. Ya que estas variables existen en la memoria
+	mientras la clase existe, se les llama variable de instancia o clase. 
+	
+	Existo solo una copia de dicha variable en memoria. Y ya que tienen un alcance mayor se puede acceder desde cualquier método
+	en la clase o bloque.
+	
+2. Variable de instancia
+
+	Una variable Java que se declara sin la palabra reservada static. Se declaran al nivel más alto de la clase.
+	Comienzan cuando se crea un objeto de ese clase y terminan cuando el objeto se destruye. Cada copia de esta variable pertenece a un objeto.
+	
+
+3. Variable local
+
+	Una variable Java que se declara dentro de un método o un circuito for. 
+	
+	Este tipo de variable comienza cuando es declarada e inicializada dentro del método y terminan cuando el método finaliza.
+	
+	Este tipo de variable tiene ser inicializada con algo antes de ser usada, si no, el compilador
+	se quejará. Los argumentos no necesitan ser iniciados.Cada una de estas variables posee diferente tipo de alcance.
+	
+Declaración de variables
+
+Cada varisble debe tener un tipo explicito. 
+
+Ejemplo,
+
+	typoVariable1 variable, typoVariable2 variable2,...typoVariable3 variable3
+
+Las variables locales se inician.
+
+Ejemplo,
+
+	typoVariable1 variable1 = tipo;
+	
+El tipo de dato que asigna a la variable depende del tipo que declara.
+
+	numerica es un número entero, mayormente se usa 0.
+	false para variables booleanas.
+	null para variable clase u objeto.
+	
+Ejemplo,
+
+	String palabra = "Este es una palabra";
+	char caracter = 'a';

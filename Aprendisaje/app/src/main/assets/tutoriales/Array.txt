@@ -1,0 +1,35 @@
+Arreglos(array)
+
+Arreglos es Java son contenedor de datos del mismo tipo. Los elementos son accesibles por medio de indice en que estan. Este indice comienza en cero.
+Si quieres imprimir o acceder el primer elemento, tienes que usar en indice 0.
+
+La manera en la que declaras un arreglo en Java es la siguiento.
+
+Ejemplo,
+
+String[] palabras;
+int[] numeros;
+NombreDeClase[] objetos;
+
+La primera declara una arreglo de letras, string, con el identificador palabras como nombre. La sugunda declara un arraglo de numberos, integer, con el identificador
+numeros como nombre. La tercera es la más complicada, pero todavía es muy fácil, declara un arreglo, array, de un tipo de clase que el programador creó.
+
+Popularizar el arreglo
+
+La manera de poner datos en el arreglo es tan solo asignarle algunos valores o muchos valores.
+
+Ejemplo
+
+palabras = {"hoy", "mañana", "casa", "mesa", "Buenos dias"};
+
+palabras[0] = "hoy";
+palabras[1] = "mañana";
+palabras[2] = "casa";
+palabras[3] = "mesa";
+palabras[4] = "Buenos dias";
+
+El pro de usar un arreglo como estos es que es muy rápido el acceso a elementos. El contra es que
+es muy lento de introducir un nuevo elemento en un índice antes del último. Para introducir un nuevo
+elemeno en el medio, tienes que mover todos los elementos que están despues del índice que quieres y
+luego poner el nuevo elemento en el indice disponible. Este es un buen tema para estudiar por ti solo.
+

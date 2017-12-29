@@ -1,0 +1,5 @@
+¿Qué es modificador de acceso?
+
+Un modificador de acceso Java especifica qué clases pueden acceder a una clase determinada y sus campos, constructores y métodos.
+
+

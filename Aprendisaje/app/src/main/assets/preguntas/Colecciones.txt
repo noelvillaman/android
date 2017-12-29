@@ -1,0 +1,3 @@
+¿Que son colecciones?
+
+Una colección es un grupo de objetos representados como una simple unidad.

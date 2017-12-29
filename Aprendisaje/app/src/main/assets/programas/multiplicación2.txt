@@ -1,0 +1,41 @@
+//TablaMultiplicarUsuario
+//El Usuario entre los números de la tabla, y si quiere que sea hasta el 9, 10, 11
+
+import java.util.Scanner;
+
+public class TablaMultiplicarUsuario {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Por favor, entre la tabla que quiere"
+				+ " imprimir");
+				
+		int tabla = scanner.nextInt();
+		
+		System.out.println("Por favor, entre hasta cual número quiere multiplicar");
+		
+		System.out.println("Puede ser de 9 a 12. Cualquier otro valor se convertira en 12");
+		
+		int hasta = scanner.nextInt();
+		
+		if(hasta > 12 || hasta < 9){
+			
+			hasta = 12;
+			
+		}
+		System.out.println("La tabla del " + tabla);
+		
+		for (int i = 1; i <= hasta; i++) {
+			
+			System.out.printf("%d x %d = %-4d", i, tabla, i * tabla);
+			
+			System.out.println();
+			
+		}
+		//Para que no haya leak en la memoria, cierra el Scanner
+		
+		scanner.close();
+	}
+
+}

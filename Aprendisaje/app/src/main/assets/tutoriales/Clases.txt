@@ -1,0 +1,202 @@
+Clases en Java
+
+Una clase es un plano desde el cual se crean objetos individuales. Puedes pensar en una clase como si fuera un corta galletas. Las galletas serían los objetos. Cada vez que creas un objeto, a eso se le llama instancia de una clase.
+
+Una clase contiene campos y métodos.
+
+Ejemplo,
+
+       public class Escuela{
+            //campos
+            //métodos
+       }
+
+Los nombres de las clases comiensan con mayúscula. Los nombres de campos y métodos comienzan con minúscula. Cuando los métodos son compuestos de dos o más palabras se usa minúscula para la primera palabra y mayúscula para las demás.
+
+Ejemplo,
+
+        colorDeCasa();
+
+La manera de pensan en los campos de una clase es considerando lo que un objeto puede tener. Considera la clase Bebé. Los campos, atributos, serían: nombre, sexo, peso, fecha de nacimiento etc.
+
+Los métodos de dicha clase serían: ponNombre(), muestraPeso(), etc.
+
+Ejemplo,
+
+        public class Bebé{
+             //campos
+             private String nombre;
+             private double peso;
+             private Date fechaDeNacimiento;
+
+             //métodos
+             public void ponNombre(String nombre){
+                   this.nombre = nombre;
+             }
+
+             ...
+        }
+
+Anatomía de una clase
+
+Una clase se componen de la siguiente manera. Primero está el modo de acceso, public, que permite a otras clases usar esta clase. Supongamos que tenemos otra clase con el nombre UsarBebé y esta clase sólo tiene el método main. Dentro de esta clase se puede crear una instancia de la clase Bebé y usar sus campos.
+
+Ejemplo,
+
+        public class UsarBebé{
+            public static void main(String[] args){
+                    Bebé b1 = new Babé();
+
+                    b1.ponNonbre("Juan");
+            }
+        }
+
+Todas las clases deben declararse públicas, public, porque sin este modo de acceso, la clase no se puede usar. También puede ser abstratas y finales.
+
+Ahora veamos que más tiene una clase. La clase se compono de la palabra reservada de Java class. Eso indica que el contenido de ese bloque es una clase.
+
+Por último la clase tiene un nombre. Después del nombre se pude usar la palabra extends para hacer la clase sea una subclase de otra. También se puede usar la palabra reservada implements para hacer que la clase implemente una interfaz del mismo paquete.
+
+Ejemplo,
+
+       public class UsarBebé extends NombreClase implements Interfaz1, Interfaz2, Intefaz3...{
+
+       }
+
+Esta clase extiende la clase con el nombre NombreClase. Cuando una clase extiende otra, esta puede usar todos los métodos declarados en la clase superclase. A esto se le llaman herencia.
+
+Ejemplo,
+
+      public class Fecha{
+          private int día;
+          private int mes;
+          private int año;
+
+      	public int getDía() {
+      		return día;
+      	}
+
+      	public void setDía(int día) {
+      		this.día = día;
+      	}
+
+      	public int getMes() {
+      		return mes;
+      	}
+
+      	public void setMes(int mes) {
+      		this.mes = mes;
+      	}
+
+      	public int getAño() {
+      		return año;
+      	}
+
+      	public void setAño(int año) {
+      		this.año = año;
+      	}
+
+
+      	@Override
+      	public String toString() {
+      		return "Fecha: día=" + día + ", mes=" + mes + ", año=" + año;
+      	}
+
+      }
+
+
+Tú puedes crear otra clase con el nombre CumpleAños y extender la clase Fecha para usar los métodos declarados ahí.
+
+Ejemplo,
+
+       public class CompleAños extends Fecha {
+            //compos propios de esta clase van aquí.
+            //Métodos propios de esta clase pueden ir aquí.
+       }
+
+Ahora cuando se crea un objeto de la clase CumpleAños, todos los métodos de la clase Fecha entán disponibles para ser usados por la clase CumpleAños.
+
+
+Ejemplo,
+
+        public class Cliente{
+              public static void main(String[] args){
+                    CompleAños cumplea = new CompleAños();
+
+                    cumplea.SetDia(14);
+                    cumplea.setMez(2);
+                    cumplea.setAño(2000);
+
+                    System.out.println(cumplea.toString());
+              }
+        }
+
+Aquí puedes ver herencia a su máxima potencia. Los métodos no declarados en la clase CompleAños se pueden invocar desde dentro de ella.
+
+Una clase puede o no tener el método main como puedes ver arriba. Cuando una clase tiene main indica que se puede ejecutar. Si tratas de ejecutar una clase sin main, el IDE te indicará que necesita main or tratará de ejecutar la clase de otra manera que no sea Java.
+
+Los métodos de la clase se invocan con la notación punto, es decir, se usa el nombre de la clase el punto y el nombre del método ocn sus argumentos si tiene.
+
+Una clase posee un método muy especial que es que se usa para crear un objeto. A este método se le llama constructor. El constructor no tiene un tipo de retorno y siempore es público. También tiene el mismo nombre que la clase. Si no declarás un constructor se crea uno por defecto con el nombre la clase y sin argumentos.
+
+La clase tiene el mismo nombre que el archivo con una extensión java.
+
+Ejemplo,
+
+       public class Hola{
+
+           //El contructor por defecto
+           public Hola(){}
+
+           //El constructor
+           public Hola(//argumentos van aquí){
+                //Aquí va el contenido del constructor.
+           }
+       }
+
+Cabe decir que el constructor puede ser más de uno. Cuando tienes más de un constructor está haciendo uso de lo que se llama overload método. Esto indica que el nombre de los demós contructores deben llevar el mismo nombre que la clase también, pero con diferente firma, signature.
+
+Ejemplo,
+       public class Hola{
+
+           //Constructor uno
+           public Hola(){
+                //Aquí va el contenido del constructor.
+           }
+
+           //Construtor dos
+           public Hola(String nombre){
+                //Aquí va el conteido del constructor dos.
+           }
+
+           //Constructor tres
+           public Hola(String nombre, String Apellido){
+                //Aqui va el contenido del constructor tres.
+           }
+       }
+
+Al tiempo de crear un objeto de esta clase, puedes usar uno de los constructores que tiene, pero solo uno.
+
+Ejemplo,
+
+       public class UsaHola{
+            private Hola hola;
+            private Hola holaNombre;
+            private Hola holaCompleto;
+
+            public void crearHola(String nombre, String apellido){
+                 this.holaCompleto = new Hola(nombre, apellido);
+            }
+
+            public void crearHola(String nombre){
+                 this.holaNombre = new Hola(nombre);
+            }
+
+            public void crearHola(){
+                 this.holaCompleto = new Hola();
+            }
+       }
+
+La clase UsaHola tiene tres campos que son tipo Hola, o sea, son tres objetos en sí que tiene que instanciarse. Dentro de los métodos se inicializan cada uno de los objetos usando los tres tipo de contructores.
+
+Por favor, trata esto en casa.

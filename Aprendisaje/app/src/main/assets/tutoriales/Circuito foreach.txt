@@ -1,0 +1,53 @@
+Circuito for_each
+
+Aparte del circuito for, for loop, Java suporta el circuito foreach. Es circuito es muy fuerte y funciona muy bien.
+
+El circuito foreach es uno que se forma por medio de usar una variable y una colección del tipo de la variable. Foreach usa dos puntos (:) para construir los pasos. Estos dos punto deben leerse “en”.
+
+Supón que tienes una colección de enteros, entonces tu variable tiene que ser de entero.
+
+La composición del metod es como sigue:
+
+    for(variable : colección){  aquí se hace algo con la variable y demás }
+
+Ejemplo,
+
+        //dentro de una clase
+        int[] pares = {2, 4, 6, 8, 10, 22, 44, 66, 88, 100, 222, 34, 52, 90 };
+
+        int suma = 0;
+
+        for(int par : pares){
+
+               System.out.println(par);
+
+               //súmalos
+               Suma = suma + par;
+
+        }
+//imprime la suma
+
+System.out.println(“La suma de todos los pares es: “ + suma);
+
+El bloque de código de arriba imprime lo siguiente:
+
+2
+4
+6
+8
+10
+22
+44
+66
+88
+100
+222
+34
+52
+90
+
+La suma de todos los pares es: 748
+
+Lo que hace este circuito es que usa el repetidor de la colección y cada vez que pasa por un valor lo pone en la variable que se crea en cada repetición. No puedes usar una variable que fue creada fuere de los paréntesis, la variable tiene que ser nueva cada vez que el circuito se ejecuta. El circuito se ejecuta las veces que vea que la colección tiene algún valor en él.
+
+

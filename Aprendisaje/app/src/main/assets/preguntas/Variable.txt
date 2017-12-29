@@ -1,0 +1,5 @@
+¿Qué es una variable?
+
+Una variable es la unidad básica de almacenamiento en un programa Java.
+
+Una variable es un lugar en la memoria de tu computadora(Random Acces Memory(RAM)) en la que puedes almacenar un valor and luego puedes buscar y usar dicho valor.

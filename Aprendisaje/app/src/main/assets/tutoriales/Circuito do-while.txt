@@ -1,0 +1,24 @@
+El circuito do...while funciona tal y como el circuito while, pero la única diferencia es que el este circuito se ejecuta por lo menos una vez sin importar el resutlado de la condición.
+
+La manera de formar este circuito es la siguiente:
+
+    do{
+        //Aquí pones el enunciado
+    }while(la condición aquí);
+
+Ejemplo,
+
+    int variable1 = 10;
+
+    do{
+
+       System.out.println("Esta línea se ejecuta sea como sea.";
+       variable1 = variable1 + 10;
+
+    } while(variable1 < 15);
+
+Estas líneas de código se imprime una sola vez porque cuando la condición se ejecuta, el compilador ve que la variable es mayor que 15 y la condición se cumple cuando mientras es menor.
+
+La variable comienza en diez e incrementa por diez, así que la primera vez que el circuito se ejecuta, la condición se cumple, y por eso no se repite.
+
+

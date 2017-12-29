@@ -1,0 +1,57 @@
+Override método
+
+Cuando una clase extiende otra, puede usar los métodos de la clase padre, superclase a su gusto. Esos métodos tiene la misma firma en cada clase. La subclase puede hacer que el método usado en la superclase sea invalidado al hacer que este produsca algo diferente que el de la superclase. A esto se le llama Override método.
+
+He aquí algunas de las reglas más importantes para usar Override método.
+
+1) La primera regla y las más importante en cuanto a reemplazar el método en Java es que sólo puede reemplazar el método en la subclase. No puede sobrescribir el método en la clase misma.
+
+2) La segunda regla más importante en cuanto a reemplazar el método en Java es que el nombre y firma del método deben ser iguales en la superclase y la subclase o interfaz y su implementación.
+
+3) La tercera regla en cuanto a reemplazar el método en Java es que el método no puede reducir la accesibilidad de un método reemplazado en Java. Por ejemplo, si el método es público, el método que lo reemplaza no puede ser protegido (protected), ni privado (private).
+
+Ejemplo,
+
+       public class Animal(){
+       private String tipo;
+       private int edad;
+  
+       //método a anular
+       public void habla(){
+            System.out.println("El animal hace un sonido");
+       }
+  }
+  
+  
+Ahora, crea la clase Perro.
+
+Ejemplo,
+
+       public class Perro{
+            //campos aquí
+ 
+            //método anulado
+            public void habla(){
+                System.out.println("El perro dice wao wao");
+            }
+       }
+
+Después de hacer esto, cada vez que se crea una clase Perro y se use el método habla, lo que se va a imprimir es lo que el perro dice. Si quieres usar lo que dice animal tienes que usar su constructor que es super.
+
+Ejemplo,
+
+       //en main
+       Perro perro1 = new Perro();
+       perro.habla(); //Esto imprime "El perro dice wao wao";
+
+Si en alguna ocación quieres usar el método que declaraste en la superclase, debes declarar un método que use el constructor de la superclase dentro de sí.
+
+Ejemplo,
+
+       // En la clase subclase
+       public void usaAnimal(){
+            super.habla();
+       }
+
+Por favor, trata esto en casa.
+

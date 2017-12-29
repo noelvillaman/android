@@ -1,0 +1,41 @@
+Una matriz no es más que un arreglo compuesta por arreglos, los elementos son arreglos. Eso hace que el elemento que quieres acceder debe user doble paréntesis. Las matrices se accesan según la fila y la columna.
+
+Ejemplo,
+
+    int[][] matriz;
+    o
+    int matriz[][];
+
+Para inicializar una matriz lo único que tienes que hacer es declara el arraglo dentro del otro.
+
+Ejemplo,
+
+    matriz = {
+
+                {1,2,3,4,5},
+
+                {4,5,6,67,90},
+
+                {122, 11, 111, 125, 554},
+
+                {90, 12, 23, 45, 95}
+
+             };
+    o
+    matriz = new int[12][12];
+
+En la inicialización de arriba puedes ver que tienes un agleglo que está compuesto de otros arreglos dentro del mismo. Puedes recordar que cada elemento de adentro es una arreglo.
+
+La segunda iniciación declare una matriz 12X12 vacía. Puedes anadir elementos hasta el 11 porque comienza a contar desde cero.
+
+Para acceder a los elementos, debes usar doble paréntesis.
+
+Ejemplo,
+
+    //Si quieres imprimir o acceder el elemento con el número 111
+    System.out.println(matriz[2][2]);
+
+    //Si quieres añadir un elemento en la columna 11 fila 11.
+    matriz[10][10] = 56;
+
+Veamos qué está pasando en este código. Lo primero que tenemos es el indentificador de la matriz, el cual es matriz. El tercer elemento de la matriz es 2 porque comienza en cero. Cuando dice "[2]" estás en el índice 2 del primer arreglo, pero el elemento tres. Ya que está ahí pudedes visitar el íindice 3 de dicho índice porque éste es un arreglo también.

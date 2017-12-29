@@ -1,0 +1,3 @@
+¿Qué es JVM?
+
+Una máquina virtual de Java (JVM) es una máquina abstracta de computación que permite a una computadora ejecutar un programa Java. Hay tres nociones de la JVM: especificación, implementación e instancia. La especificación es un documento que describe formalmente lo que se requiere de una implementación de JVM. Tener una especificación simple asegura todas las implementaciones interoperables. Una implementación de JVM es un programa de ordenador que cumple con los requisitos de la especificación de JVM. Una instancia de una JVM es una implementación en un proceso que se ejecuta un programa compilado en bytecode de Java.

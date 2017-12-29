@@ -1,0 +1,3 @@
+¿Qué es método main?
+
+Main es el método que da la entrada a una aplicación Java. Sin este método el program o aplicación no tiene manera de ejecutarse. El compilador te indicará cuando no tengas un método main.

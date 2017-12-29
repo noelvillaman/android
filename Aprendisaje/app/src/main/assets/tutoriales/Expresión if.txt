@@ -1,0 +1,61 @@
+Expresion if
+
+La expresión if es una que contiene un contenido Boolean y un bloque entre parentensis.
+
+    if(expresión condicional){
+       Aqui va lo que se ejecuta en caso de.
+    }
+
+Si la expresión es verdad, el contenido entre parentensis se ejecuta de lo contrario el bloque no se ejecuta y el programa sigue a la siguiente
+expresión.
+
+Ejemplo,
+
+    if( 8 > 2){
+        System.out.println("Ocho es mayor que dos");
+    }
+
+if...else
+
+Si...entonce es una conjunto de expesiones que se ejecuta si una de alla es verdad.
+
+    if(8 > 2){
+            System.out.println("Ocho es mayor que dos");
+          } else {
+            System.out.println("Dos es mayor que ocho");
+         }
+
+En este ejemplo, la parte "if" se ejecuta porque la parte entre parentesis es verdad. Si fuera mentira, entonces la primara expresion no se excuta y la segunda
+ es la que ejecuta de cualquier manera. 
+ 
+ Es posible tener expesiones if dentro de otros.
+ 
+ Ejemplo,
+ 
+     int Luis = 40;
+     int Santos = 33;
+     int Eloy = 15;
+ 
+     if(Luis == 40){
+        if(Santos > Eloy){
+            if(Luis < Santos){
+                System.out.println("Santo no tiene 40 años");
+           }
+        }
+    }
+
+Este bloque de código no imprime nada porque la tercera expresion entre paréntesis no es verdad. Luis es igual a 40. Luis es mayor que Eloy, pero Luis no es mejor que
+Santos. Para poder impimir algo con este bloque puedes usar "else" despues de cerrar el primer if.
+
+Ejemplo,
+
+    if(Luis == 40){
+        if(Santos > Eloy){
+           if(Luis < Santos){
+           System.out.println("Santos no tiene 40 años");
+           }
+        }
+    } else {
+       System.out.println("Santos tiene 40 años");
+
+    }

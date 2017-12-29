@@ -1,0 +1,3 @@
+¿Qué es encapsulación?
+
+Encapsulación consiste en poner los miembros de un objeto dentro de una clase.

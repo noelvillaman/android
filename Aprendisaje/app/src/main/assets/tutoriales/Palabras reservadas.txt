@@ -1,0 +1,57 @@
+Hay un grupo de palabras en Java que no se pueden usar como identificadores de variables porque son reservadas.
+
+A continuación la lista de ellas
+
+		 Abstract
+		 boolean
+		 byte
+		 catch
+		 class
+		 new
+		 package
+		 protected
+		 return
+		 static
+		 super
+		 goto
+		 implements
+		 instanceof
+		 interface
+		 native
+		 synchronized
+		 throw
+		 transient
+		 void
+		 while
+		 default
+		 double
+		 enum
+		 final
+		 assert
+		 break
+		 case
+		 char
+		 const
+		 for
+		 private
+		 public
+		 short
+		 strictfp
+		 float
+		 if
+		 import
+		 int
+		 long
+		 switch
+		 this
+		 throws
+		 try
+		 volatile
+		 continue
+		 do
+		 else
+		 extends
+		 finally
+
+Ningunas de estas palabras pueden ser usadas como identificadores para crear variables.
+

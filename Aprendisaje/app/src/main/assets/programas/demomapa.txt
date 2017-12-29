@@ -1,0 +1,56 @@
+//MapaDemo.java
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class MapaDemo {
+
+  public static void main(String[] args) {
+
+		Map<Integer, String> hashMap = new HashMap<>();
+
+		Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
+
+		Map<Integer, String> treeMap = new TreeMap<Integer, String>();
+
+
+		System.out.println("HashMap");
+
+		ponItem(hashMap);
+
+		System.out.println("LinkedHashMap");
+
+		ponItem(linkedHashMap);
+
+		System.out.println("TeeMap");
+
+		ponItem(treeMap);
+	}
+
+	public static void ponItem(Map<Integer, String> map) {
+
+		map.put(0, "cero");
+
+		map.put(3, "tres");
+
+		map.put(5, "cinco");
+
+		map.put(7, "siete");
+
+		map.put(2, "dos");
+
+		map.put(10, "diez");
+
+		for (Integer clave : map.keySet()) {
+
+			String value = map.get(clave);
+
+			System.out.printf("%3d : %s\n", clave, value);
+
+		}
+
+	}
+
+}

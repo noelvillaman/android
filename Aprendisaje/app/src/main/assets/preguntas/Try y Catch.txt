@@ -1,0 +1,3 @@
+¿Qué es un bloque try/catch?
+
+Un bloque try/catch se usa para manejar excepciones que suceden en Java.

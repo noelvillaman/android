@@ -1,0 +1,63 @@
+Una clase abstracta es aquella que se declara usando la palabra reservada por Java abstract.
+
+Una clase abstracta no puede instanciar. Si trata eso el compilador te lo dejará saber. Este tipo de clase sí se puede extender. Lo que indica que puedes declarar métodos que creas que varias clases diferentes usan y usarlo.
+
+Una clase abstracta puede o no tener métodos abstractos que son aquellos que sólo se declaran en la clase, pero que no tienen una implementación; el cuerpo de dichos métodos los debe proveer la clase que extiende la clase abstracta, la subclase.
+
+Si una clase tiene algún método abstracto tiene que ser declarada abstracta.
+
+Las clases abstractas funcionan tal y como una interfaz con la diferencia en que las clases abstractas pueden tener métodos con implementación, pero ti sólo tienes métodos abstractos en una clase, entonces esa clase funciona igual que una interfaz.
+
+Una clase abstracta no necesariamente necesita métodos abstractos, pero como se dijo anteriormente, si tienes por lo menos un método abstracto, la clase debe declararse abstracta.
+Ejemplo,
+
+        public abstract Vehículo
+        {
+           public void velocidad(int cantidad)
+           {
+                // haz algo con el argumento cantidad aquí
+           }
+
+           public void frena(int indice)
+           {
+                try
+        	{
+        		Thread.sleep ( 1000 * 60 * 60 * indice);
+        	}
+        	catch (InterruptedException ie) { /* ignore */ }
+           }
+
+           public abstract void corre();
+        }
+
+El análisis de este código es ocmo sigue. La clase es abtracta porque se declara así. Hay tres métodos, de entre los cuales uno es abstrato.
+
+Esta clase puede ser extendida.
+
+Ejemplo,
+
+        public class Carro extends Vehiculo {
+            private String ....
+            private int ....
+            private double ....
+
+            //constructor
+
+            //métodos setters y getters
+
+            //ahora a implementar el método corre()
+            public abstract void corre(){
+                System.out.println("El carro corre a 60");
+            }
+        }
+
+
+Cada vez que se haga una instancia de esta clase, el objeto hereda todos los métodos de la clase abtracta y los puede usar.
+
+Ejemplo,
+
+        Carro corolla = new Carro(//argumentos del contructor aqui si tiene);
+
+        corolla.velocidad(100);
+
+        corolla.frena(30);

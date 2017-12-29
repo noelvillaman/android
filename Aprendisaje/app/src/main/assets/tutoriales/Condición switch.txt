@@ -1,0 +1,72 @@
+Switch
+
+
+En Java existen dos condicionales if y switch.
+
+El condicional if es uno que se puede repetir muchas veces en una clase or en un método de una clase.
+
+Ejemplo,
+                //en una clase
+                if(día == 1){
+                  system.out.prinln(“Domingo”);
+                }
+                if(día == 2){
+                  system.out.prinln(“Lunes”);
+                }
+                if(día == 3){
+                  system.out.prinln(“Martes”);
+                }
+                if(día == 4){
+                  system.out.prinln(“Miércoles”);
+                }
+                if(día == 5){
+                  system.out.prinln(“Jueves”);
+                }
+                if(día == 6){
+                  system.out.prinln(“Viernes”);
+                }
+                if(día == 7){
+                  system.out.prinln(“Sábado”);
+                }
+
+Eso es mucho. ¿Qué pasa si tienes miles de esos? Tendría que repetir todo eso miles de veces. Para resolver un problema como ese, Java tiene otro condicional llamado switch que toma la condición una vez y la comparar con casos. Si se cumple un caso el programa ejecuta el próximo bloque de código sin mirar las demás condiciones. Es lo mismo que if, pero no tienes que escribir tanto.
+
+La composición del condicional switch es como sigue:
+
+      Switch(variblel){
+          //casos
+          Case 1:
+              //Código aquí.
+              Break;
+          Case 2:
+               ….
+             Break;
+          Case 3:
+                 ….
+             Break;
+      }
+
+Lo primero que se ve es la palabra revervada de Java switch que indica que un condicional está al punto de empezar. Luego la variable que quieres comparar con cada caso. Luego dentro de los paréntesis se encuentra cada caso. Los casos pueden leerse como una condición “if”. Si la variable es igual a uno, en el modelo mostrado arriba, el primer bloque se ejecuta. Para salir de la condición switch tienes que usar la palabra reservada break después de lo que quieres hacer en cada condición. Si no usas break, todas las condiciones se ejecutarán sin importar lo que quieras.
+
+Ejemplo,
+            //en una clase
+            int hoy = 4;
+            switch (hoy) {
+                    case 1:
+                        System.out.println("La variable es uno");
+                        break;
+                    case 2:
+                        System.out.println("La variable es dos");
+                        break;
+                    case 3:
+                        System.out.println("La variable es uno");
+                        break;
+                    case 4:
+                        System.out.println("La variable es dos");
+                        break;
+
+            }
+
+
+Por favor, trata esto en casa.
+

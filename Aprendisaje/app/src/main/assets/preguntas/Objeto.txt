@@ -1,0 +1,3 @@
+¿Qué es un objeto?
+
+Un objeto es una instancia de una clase. En él se definen el estado y comportamiento de una entidad real.

@@ -1,0 +1,6 @@
+¿Qué es modificador de acceso privado (privado)?
+
+Modificador de acceso privado - private
+
+Modificador de acceso privado es el nivel de acceso más restrictivo. Clase y las interfaces no pueden ser privadas.
+Los métodos, variables y constructores que se declaran privados sólo se pueden acceder dentro de la propia clase declarada.

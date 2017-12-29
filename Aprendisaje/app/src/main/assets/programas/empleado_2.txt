@@ -1,0 +1,48 @@
+//Empleado.java
+
+public abstract class Empleado_2 {
+        private String nombre;
+        private String domicilio;
+        private int empNumero;
+
+        //Constructor vacío
+        public Empleado_2(){}
+
+        public double calcularPago()
+       {
+                 System.out.println("Dentro de Empleado calcularPago");
+                 return 0.0;
+       }
+
+       public void enviarCheque() {
+                System.out.println("Mailing a check to " + this.nombre
+                + " " + this.domicilio);
+       }
+
+       public String toString()
+       {
+               return nombre + " " + domicilio + " " + empNumero;
+       }
+
+       public String getNombre()
+       {
+               return nombre;
+       }
+
+       public String getDomicilio()
+       {
+               return domicilio;
+       }
+
+       public void setDomicilio(String nuevoDomicilio)
+       {
+               domicilio = nuevoDomicilio;
+       }
+
+       public int getempNumero()
+      {
+               return empNumero;
+      }
+}
+
+//UsarEmpleado_2.java

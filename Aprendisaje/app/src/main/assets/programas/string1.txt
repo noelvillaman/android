@@ -1,0 +1,53 @@
+//String1.java
+
+public class String1 {
+
+	public static void main(String[] args) {
+		
+		String mano = "Con dedos";
+		
+		mano = "dedos";
+		
+		System.out.println(mano);
+		//palabras para comparar
+		String hoy = new String("lunes");
+		String dia = new String("lunes");
+		
+		//Lo que pasa si usas "=="
+		if(hoy == dia){
+			System.out.println("Son iguales!");
+		} else
+		{
+			System.out.println("¿NO son iguales?");
+		}
+		
+		//Lo que pasa si usas el método equals(String s);
+		if(hoy.equals(dia)){
+			System.out.println("Son iguales!");
+		} else
+		{
+			System.out.println("¿NO son iguales?");
+		}
+		
+		//Algunos métodos usamos aquí para demostración
+		
+		//Hacer todo mayúscula
+		System.out.println(hoy.toUpperCase());
+		
+		//Hacer todo minúscula
+		System.out.println(hoy.toLowerCase());
+		
+		//Ver que hay en position #, siendo cero el primer número
+		System.out.println(hoy.charAt(3));
+		
+		//Cortar la palabra
+		System.out.println(hoy.substring(2));
+		//Encontrar la primera ocurrencia de la letra
+		//Si no existe, se imprime -1
+		System.out.println(hoy.indexOf('s'));
+		
+		System.out.println();
+
+	}
+
+}

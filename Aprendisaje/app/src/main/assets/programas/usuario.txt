@@ -1,0 +1,26 @@
+//EntradaUsuario.java
+//El program demuestra el uso de la clase Scanner
+
+import java.util.Scanner;
+
+public class EntradaUsuario {
+    public void entrada(){
+        Scanner scaner = new Scanner(System.in);
+		
+        long numero = 0; 
+		
+        String nombre = "";
+		
+        System.out.println("Por fovar, entre su nombre: ");
+		
+        nombre = scaner.nextLine();
+		
+        System.out.println("Por favor, entre su número: ");
+		
+        numero = scaner.nextLong();
+		
+        System.out.println("Su nombre es " + nombre + " y su número de teléfono es " + numero);
+		
+        scaner.close();
+    }
+}

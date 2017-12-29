@@ -1,0 +1,4 @@
+¿Qué es Map?
+
+Map es una interfaz que asigna claves a valores. Funciona en par. Un mapa no puede contener claves
+duplicadas; cada clave puede asignarse a más de un valor.

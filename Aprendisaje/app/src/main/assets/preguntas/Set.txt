@@ -1,0 +1,3 @@
+¿Qué es set?
+
+Una colección que no contiene los elementos duplicados. Más formalmente, set no contiene ningún par de argumentos argumento1 y argumento2 tales que argumento1.equals(argumento2) y a lo máximo un elemento nulo, null. Como el nombre lo indica, esta interfaz modela la abstracción matemática de conjuntos.

@@ -1,0 +1,44 @@
+//Apuesta.java
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Apuesta {
+
+	public static void main(String[ ] args) {
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("¿Cuántos números necesita sacar?");
+
+		int k = entrada.nextInt();
+
+		System.out.println("¿Cuál es el número más alto que puedes sacar?");
+
+		int n = entrada.nextInt();
+
+		int[ ] números = new int[n];
+
+		for (int i = 0; i < números.length; i++) {
+			números[i] = i + 1;
+		}
+
+		int[] result = new int[k];
+
+		for (int i = 0; i < result.length; i++) {
+			int r = (int) (Math.random() * n);
+			result[i] = números[r];
+			números[r] = números[n-1];
+			n--;
+		}
+
+		Arrays.sort(result);
+		System.out.println("Juega la siguiente combinación. Yo te haré rico");
+
+		for (int r : result) {
+			System.out.println(r);
+			System.out.println();
+		}
+
+	}
+
+}

@@ -1,0 +1,38 @@
+//ArrayListEnteros.java
+package colecciones;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayListNumeros {
+
+	public static void main(String[] args) {
+
+	}
+		ArrayList<Integer> listaNumeros = new ArrayList<>();
+
+		//Añade 100 números
+		for(int i = 1; i <= 100; i++){
+
+			listaNumeros.add(i);
+		}
+
+		//Ver la cantidad
+		int cantidad = listaNumeros.size();
+
+		System.out.println("La cantidad de elementos en la lista es: " + cantidad);
+
+		System.out.println("El primer elemento es: " + listaNumeros.get(0));
+
+
+		//Crea el repetidor
+
+		Iterator<Integer> repetidor = listaNumeros.iterator();
+
+		while(repetidor.hasNext()){
+
+			System.out.println(repetidor.next());
+		}
+	}
+
+}

@@ -1,0 +1,50 @@
+Como ya hemos mencionado en el tutorial Clases, los objetos definen su interacción con el mundo exterior a través de los métodos que exponen. Los métodos forman la interfaz del objeto con el mundo exterior; los botones en el frente de su televisor, por ejemplo, son la interfaz entre usted y el cableado eléctrico en el otro lado de su interructor de plástico. Pulsas el botón "power" para encender y apagar la televisión.
+
+En su forma más común, una interfaz es un grupo de métodos relacionados con los cuerpos vacíos. Comportamiento de la bicicleta, si se especifica como una interfaz, puede aparecer como sigue:
+
+Interface Bicicleta {
+
+    //  la revolución de la candena por minutos
+    void cambiaCadencia(int otroValor);
+
+    void usarCambio(int otroValor);
+
+    void acelera(int aumenta);
+
+    void frena(int reducion);
+}
+
+Para implementar esta interfaz, el nombre de la clase indica un tipo de biblicleta (una determinada marca de bicicleta, por ejemplo, como ACMEBicycle), y se usa la palabra clave "implements" en la declaración de la clase:
+
+class ACMEBicicleta implements Bicicleta {
+
+    int cadencia = 0;
+    int velocidad = 0;
+    int cambio = 1;
+
+    //El compilador te requirirá que derinas o uses los métodos declarados en la interfaz
+
+    void cambiaCadencia(int otroValor) {
+         cadencia = otroValor;
+    }
+
+    void usarCambio(int otroValor) {
+         cambio = otroValor;
+    }
+
+    void acelera(int aumenta) {
+         velocidad = velocidad + aumenta;
+    }
+
+    void frena(int reducion) {
+         velocidad = velocidad - reducion;
+    }
+
+    void imprimeStado() {
+         System.out.println("cadencia:" +
+             cadencia + " velocidad:" +
+             velocidad + " cambio:" + cambio);
+    }
+}
+
+El implementar una interfaz permite que una clase sea más formal en cuanto al comportamiento que compromete proporcionar. Las interfaces forman un contrato entre la clase y el mundo exterior, y este contrato se aplica en tiempo de compilación mediante el compilador. Si su clase pretende implementar una interfaz, todos los métodos definidos por la interfaz deben aparecer en su código fuente antes de que la clase compile con éxito.

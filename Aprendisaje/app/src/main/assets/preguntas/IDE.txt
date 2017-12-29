@@ -1,0 +1,3 @@
+¿Qué es un IDE?
+
+IDE son las siglas por integrated development environments, ambiente de desarrollo integrado. Se les llama asi porque intregan varias herramientas en un programa de software.

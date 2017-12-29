@@ -1,0 +1,55 @@
+//Maraton.java de MIT
+
+
+public class Maraton {
+
+	public static void main(String[] args) {
+		String[] nombres = { "Elena", "Thomas", "Hamilton", "Suzie", "Phil",
+				"Matt", "Alex", "Emma", "John", "James",
+				"Jane", "Emily", "Daniel", "Neda", "Aaron", "Kate" };
+
+		int[] tiempos = { 341, 273, 278, 329, 445, 402, 388, 275, 243,
+				334, 412, 393, 299, 343, 317, 265 };
+
+		for (int i = 0; i < nombres.length; i++) {
+			System.out.println(nombres[i] + ": " + tiempos[i]);
+		}
+
+		System.out.println("El nombre con el de mejor tiempo es: " + nombres[arregloNumeros(tiempos)]
+				+ " y el tiempo que tomó fue: " + tiempos[arregloNumeros(tiempos)]);
+
+		System.out.println("El nombre del segundo más bajo es : " + nombres[segundoMejor(tiempos)]
+				+ " y el tiempo que tomó fue: " + tiempos[segundoMejor(tiempos)]);
+		segundoMejor(tiempos);
+
+	}
+
+	private static int arregloNumeros(int[] nombres){
+		int indice = 0;
+		int lowest = nombres[0];
+		for (int i = 0; i < nombres.length; i++) {
+			if(lowest > nombres[i]){
+				lowest = nombres[i];
+				indice = i;
+			}
+		}
+		return indice;
+	}
+
+	private static int segundoMejor(int[] modelo){
+		int mejor = arregloNumeros(modelo);
+		int segundo = modelo[0];
+		int indice =0;
+
+		for (int i = 0; i < modelo.length; i++) {
+			if(i != mejor){
+				if(modelo[i] > modelo[mejor] && modelo[i] < segundo)
+					segundo = modelo[i];
+					indice = i;
+
+			}
+		}
+		return indice;
+	}
+
+}

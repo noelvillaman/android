@@ -1,0 +1,76 @@
+
+El método main es la entrada a una aplicación. Sin un método main, no hay manera de ejecutar un programa.
+
+La firma de main es como sigue:
+
+        public static void main(String[] args){
+             //Aquí se pode el contenido que quieres usar de la aplicación.
+        }
+
+Muchas veces una aplicación solo tiene el método main. Eso no es incorrecto si no tienes una gran cantidad de código.
+
+Programadores usan muchos métodos que luego invocan en main para escribir un programa. Es una buena práctica usar métodos para luego invocar en el método main.
+
+Ejemplo,
+
+       //esto no es una buena práctica
+
+       public class Baseball_1{
+           public static void main(String[] args){
+
+                 String primeraBase = "Cabrera";
+                 String segundaBase = "Ordon";
+                 String shortStop = "Crawford";
+                 String terceraBase = "Machado";
+                 String catcher = "Molina";
+
+                 //Convierte los nombres a mayúsculas
+                 primeraBase = primeraBase.toUpperCase();
+                 segundaBase = segundaBase.toUpperCase();
+                 shortStop = shortStop.toUpperCase();
+                 terceraBase = terceraBase.toUpperCase();
+                 catcher = catcher.toUpperCase();
+
+                 System.out.println(primeraBase);
+                 System.out.println(segundaBase);
+                 System.out.println(shortStop);
+                 System.out.println(terceraBase);
+                 System.out.println(catcher);
+
+           }
+       }
+
+Para hacer que un programa sea más legible, se debe usar métodos. El bloque de código anterior muestra muchas repeticiones de una sola cosa. Cuando los programadores ven que algo así sucede, ellos usan métodos para resolver tanta repeticiones.
+
+Ejemplo,
+
+       public class Baseball_1{
+           public static void main(String[] args){
+
+                 String[] jugadores = {
+                                 "Cabrera",
+                                 "Ordon",
+                                 "Crawford",
+                                 "Machado",
+                                "Molina"
+
+                };
+
+                for(int i = 0; i < jugadores.length; i++){
+
+                       jugadores[i] = convertirMayusculas(jugadores[i]);
+                       System.out.println(jugadores[i]);
+                }
+
+           }
+
+           //método para convertir palabras a mayúscula
+           private static String convertirMayusculas(String palabra)
+           {
+                   return palabra.toUpperCase();
+           }
+       }
+
+En ambos casos ese código imprime lo mismo, pero el último bloque es más fácil de entender y leer.
+
+Por favor, trata esto en casa.

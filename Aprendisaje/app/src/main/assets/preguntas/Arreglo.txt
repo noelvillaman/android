@@ -1,0 +1,3 @@
+¿Qué es un arreglo, array?
+
+Un arreglo, array, es una lista de valores organizados del mismo tipo.

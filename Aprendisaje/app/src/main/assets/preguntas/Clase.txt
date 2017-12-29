@@ -1,0 +1,3 @@
+¿Qué es una clase?
+
+Una clase es un plano de donde se crean los objetos individuales. Una clase define el atributo y comportamiento de un objeto.

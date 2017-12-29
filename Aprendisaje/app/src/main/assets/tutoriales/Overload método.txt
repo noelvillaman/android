@@ -1,0 +1,30 @@
+
+Overload método
+
+Si tiene un método en una clase y quieres usar el mismo nombre para otro método, puedes hacerlo si cambias su firma, signature. Overload método es una parte grande de lo que se llama progración orientad a objeto, OOP,siglas en inglés.
+
+Overload tiene que ver con el cambio de firma de un método. La firma del método es lo que contiene entre paréntesis, los argumentos.
+
+Ejemplo,
+
+        pulblic class Casa{
+             //campos aquí
+
+             //Método uno
+             public String comida(){
+                   return "Hoy se come arroz";
+             }
+
+             public String comida(String pan){
+                  return "Hoy se come " + pan;
+             }
+
+             public String comida(int dinero){
+                   return "Necetamos  " + dinero + " para comer hoy";
+             }
+        }
+
+
+Este bloque de código declara tres métodos con el mismo nombre pero con diferentes firmas. Cabe decir que si cambias el tipo de retorno y no añades un argumento, el compilador te hará saber que el método está repetido, y, por lo tanto, indica un error de compilación.
+
+Por favor, trata eso en casa.
